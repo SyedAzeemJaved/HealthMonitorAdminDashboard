@@ -1,4 +1,5 @@
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = 'https://health-mon-api-production.up.railway.app';
+// const API_BASE_URL = 'http://localhost:8000';
 
 export const constants = {
   TOKEN: `${API_BASE_URL}/token`,
