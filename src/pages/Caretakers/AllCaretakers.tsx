@@ -112,8 +112,8 @@ export default function AllCaretakers() {
             email: caretaker.email,
             gender: caretaker.gender,
             user_role: 'caretaker',
-            created_at_in_utc: caretaker.created_at_in_utc,
-            updated_at_in_utc: caretaker.updated_at_in_utc,
+            created_at: caretaker.created_at,
+            updated_at: caretaker.updated_at,
             additional_details: {
               phone: caretaker.additional_details.phone,
               age: caretaker.additional_details.age,
@@ -234,12 +234,12 @@ export default function AllCaretakers() {
                         </td>
                         <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                           <p className="text-black dark:text-white">
-                            {TimestampConverter(caretaker.created_at_in_utc)}
+                            {TimestampConverter(caretaker.created_at)}
                           </p>
                         </td>
                         <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                           <p className="text-black dark:text-white">
-                            {TimestampConverter(caretaker?.updated_at_in_utc)}
+                            {TimestampConverter(caretaker?.updated_at)}
                           </p>
                         </td>
                         <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">

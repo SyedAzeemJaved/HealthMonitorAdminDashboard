@@ -3,8 +3,8 @@ interface BasicUser {
   readonly name: string;
   readonly email: string;
   readonly gender: 'male' | 'female' | 'rather_not_say';
-  readonly created_at_in_utc: string;
-  readonly updated_at_in_utc: string | null;
+  readonly created_at: string;
+  readonly updated_at: string | null;
 }
 
 export interface AdditionalDetail {

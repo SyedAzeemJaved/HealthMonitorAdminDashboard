@@ -112,8 +112,8 @@ export default function AllDoctors() {
             email: doctor.email,
             gender: doctor.gender,
             user_role: 'doctor',
-            created_at_in_utc: doctor.created_at_in_utc,
-            updated_at_in_utc: doctor.updated_at_in_utc,
+            created_at: doctor.created_at,
+            updated_at: doctor.updated_at,
             additional_details: {
               phone: doctor.additional_details.phone,
               age: doctor.additional_details.age,
@@ -234,12 +234,12 @@ export default function AllDoctors() {
                         </td>
                         <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                           <p className="text-black dark:text-white">
-                            {TimestampConverter(doctor.created_at_in_utc)}
+                            {TimestampConverter(doctor.created_at)}
                           </p>
                         </td>
                         <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                           <p className="text-black dark:text-white">
-                            {TimestampConverter(doctor?.updated_at_in_utc)}
+                            {TimestampConverter(doctor?.updated_at)}
                           </p>
                         </td>
                         <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">

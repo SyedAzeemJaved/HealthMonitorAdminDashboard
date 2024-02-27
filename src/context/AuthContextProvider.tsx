@@ -8,12 +8,14 @@ import { constants } from '@constants';
 
 const blankUser: AdminProps = {
   id: 0,
-  full_name: '',
+  name: '',
   email: '',
+  gender: 'rather_not_say',
   accessToken: '',
-  created_at_in_utc: '',
-  updated_at_in_utc: null,
   authenticated: false,
+  created_at: '',
+  updated_at: null,
+  user_role: 'admin',
   additional_details: null,
 };
 
@@ -50,13 +52,15 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
         setUser({
           id: response.id,
-          full_name: response.full_name,
+          name: response.name,
           email: response.email,
+          gender: response.gender,
           accessToken: t,
           authenticated: true,
-          created_at_in_utc: response.created_at_in_utc,
-          updated_at_in_utc: response.updated_at_in_utc,
+          created_at: response.created_at,
+          updated_at: response.updated_at,
           additional_details: null,
+          user_role: 'admin',
         });
       } catch (err: any) {
         fireToast(

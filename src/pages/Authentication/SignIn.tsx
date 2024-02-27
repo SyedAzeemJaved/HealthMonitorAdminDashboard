@@ -62,13 +62,15 @@ const SignIn = () => {
       if (response.user.user_role === 'admin') {
         setUser({
           id: response.user.id,
-          full_name: response.user.first_name,
+          name: response.user.name,
           email: response.user.email,
+          gender: response.user.gender,
           accessToken: response.access_token,
           authenticated: true,
-          created_at_in_utc: response.user.created_at_in_utc,
-          updated_at_in_utc: response.user.updated_at_in_utc,
+          created_at: response.user.created_at,
+          updated_at: response.user.updated_at,
           additional_details: null,
+          user_role: response.user.user_role,
         });
       } else {
         throw new Error('You are not an admin');

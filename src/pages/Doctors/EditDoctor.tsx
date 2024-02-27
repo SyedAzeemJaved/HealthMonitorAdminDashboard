@@ -17,8 +17,8 @@ type EditDoctorProps = {
   name: string;
   email: string;
   gender: 'male' | 'female' | 'rather_not_say';
-  created_at_in_utc: string;
-  updated_at_in_utc: string | null;
+  created_at: string;
+  updated_at: string | null;
   additional_details: {
     phone: string | null;
     age: number | null;
@@ -45,8 +45,8 @@ export default function EditDoctor() {
     name: '',
     email: '',
     gender: 'rather_not_say',
-    created_at_in_utc: '',
-    updated_at_in_utc: null,
+    created_at: '',
+    updated_at: null,
     additional_details: {
       phone: null,
       age: null,
@@ -149,8 +149,8 @@ export default function EditDoctor() {
         name: response.name,
         email: response.email,
         gender: response.gender,
-        created_at_in_utc: response.created_at_in_utc,
-        updated_at_in_utc: response.updated_at_in_utc,
+        created_at: response.created_at,
+        updated_at: response.updated_at,
         additional_details: {
           phone: response.additional_details.phone,
           age: response.additional_details.age,
@@ -451,7 +451,7 @@ export default function EditDoctor() {
               <div className="w-full sm:w-1/2">
                 <label
                   className="mb-3 block text-sm font-medium text-black dark:text-white"
-                  htmlFor="created_at_in_utc"
+                  htmlFor="created_at"
                 >
                   Joined
                 </label>
@@ -459,10 +459,10 @@ export default function EditDoctor() {
                   <input
                     className="w-full rounded border border-stroke bg-gray px-4.5 py-3 text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
                     type="text"
-                    name="created_at_in_utc"
-                    id="created_at_in_utc"
+                    name="created_at"
+                    id="created_at"
                     readOnly
-                    value={TimestampConverter(doctor.created_at_in_utc)}
+                    value={TimestampConverter(doctor.created_at)}
                   />
                 </div>
               </div>
@@ -470,7 +470,7 @@ export default function EditDoctor() {
               <div className="w-full sm:w-1/2">
                 <label
                   className="mb-3 block text-sm font-medium text-black dark:text-white"
-                  htmlFor="updated_at_in_utc"
+                  htmlFor="updated_at"
                 >
                   Last update
                 </label>
@@ -479,10 +479,10 @@ export default function EditDoctor() {
                   <input
                     className="w-full rounded border border-stroke bg-gray px-4.5 py-3 text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
                     type="text"
-                    name="updated_at_in_utc"
-                    id="updated_at_in_utc"
+                    name="updated_at"
+                    id="updated_at"
                     readOnly
-                    value={TimestampConverter(doctor?.updated_at_in_utc)}
+                    value={TimestampConverter(doctor?.updated_at)}
                   />
                 </div>
               </div>

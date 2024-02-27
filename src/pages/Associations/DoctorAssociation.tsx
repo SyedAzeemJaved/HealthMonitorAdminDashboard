@@ -125,8 +125,8 @@ export default function DoctorAssociation() {
             email: patient.email,
             gender: patient.gender,
             user_role: 'patient',
-            created_at_in_utc: patient.created_at_in_utc,
-            updated_at_in_utc: patient.updated_at_in_utc,
+            created_at: patient.created_at,
+            updated_at: patient.updated_at,
             additional_details: {
               phone: patient.additional_details.phone,
               age: patient.additional_details.age,
